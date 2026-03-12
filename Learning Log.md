@@ -29,3 +29,16 @@ By the end of week 1 we decided it is best that we both had slightly overlapping
 
 **Next steps?**
 The next steps would be to research deeper into the areas that I am responsible for to gain deeper understanding of neural network models as I have underestimated previously. I should also start working each week to building a small prototype to merge with my partner's model.
+
+### Week 2
+**What have I done?**
+Having the responsibility of the algorithmic and logical side of explaining neural networks, I was tasked with talking about logits being converted to probability. Additionally, I talked about the loss function and different procedures we can take to ensure that the model does not crash by dividing by 0 or finding the log of 0. Finally, I talked about how computers prefer a continuous loss gradient curve to learn to optimise its outputs while for humans it would be better to check stepped accuracy to see the performance of the model.
+
+**What have I learnt?**
+For this week, my friend decided to dive a little deeper into explaining about the inner workings of a softmax function and its implementation in python logic. He then mentioned cross entropy loss and gradient descent. Gradient of loss can be used to determine the weight and bias of each signal of the neural network to help improve the model. The cross entropy loss is a way for the model to evaluate how well it has performed.
+
+**Any changes to goals?**
+After this week's discussion I realized that no matter how well we try to split the work in the category of mathematics and data and algorithmic and logical aspect of the neural network, we will always have overlapping parts. So we decided that it would be best to just list all things that we need to learn to build our own convolutional neural network and divide the work from there instead of dividing it into categories. This way we can ensure that none of our works are overlapping.
+
+**Next steps?**
+For the following week, I will be focusing on researching data splitting for optimal performance, mini-batching and epoch loops. My friend will be looking into pooling, padding and strides for our data and he will also be looking into the fundamentals of backpropagations.
