@@ -135,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "f685a89a39302d24",
@@ -241,10 +240,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "40f942bc14860bb0",
+  "active": "bc702d84998f993a",
   "lastOpenFiles": [
-    "Learning Points.md",
     "Learning Log.md",
+    "Learning Points.md",
     "Speaking Points.md",
     "Pasted image 20260306012008.png",
     "Media/Pasted image 20260303200503.png",
