@@ -22,3 +22,35 @@ Backpropagation
 	- Bias: old bias minus the error signal
 - Convolutional layer update
 	- Update filter using the weight function but instead the transpose of the input activation we would be using the incoming error gradient. 
+
+Data splitting
+Mini batching
+Epoch loop
+### Week 4
+Confusion matrix
+F1-score
+Training accuracy
+Validation accuracy
+Learning curves
+Filter visualization
+GradCAM
+
+### Week 5
+Keras data augmentation
+- flips
+- rotations
+- shearing
+- zooming
+- shifting
+- mirroring
+- adjusting brightness
+
+$w_{t+1} = w_t - \alpha \cdot g_t$
+
+$v_t = \beta \cdot v_{t-1} + (1 - \beta) \cdot g_t$ 
+$w_{t+1} = w_t - \alpha \cdot v_t$
+
+ADAM
+Momentum
+RMSProp
+Dropout

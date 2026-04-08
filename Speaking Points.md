@@ -184,3 +184,64 @@ correct_guesses = (predicted_indices == true_indices)
 # 3. Calculate percentage (NumPy treats True as 1, False as 0)
 human_accuracy = np.mean(correct_guesses) 
 ```
+
+#### Week 3
+##### 1. The Core Metrics (The Math)
+Understanding these numbers helps you diagnose if your model is actually learning or just guessing.
+
+###### Loss (Cross-Entropy Loss)
+* **The Concept:** Loss is the "penalty" for an incorrect prediction. The higher the loss, the worse the model is performing. 
+* **The Math:** For a single image, $L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)$.
+* **Expansion:** In multi-class classification, we usually use a **Softmax** activation at the end to turn raw numbers into probabilities. Cross-entropy then measures the "distance" between your predicted probability and the actual 1.0 (the truth).
+* **Teaching Tip:** Tell your friend to think of Loss as a "Proximity Sensor"—it tells the model how far it is from the "truth" so it can adjust its weights.
+
+###### Precision vs. Recall vs. F1-Score
+* **Precision (Quality):** Of all the times the model predicted "Cat," how many were actually cats? 
+    * $\text{Precision} = \frac{TP}{TP + FP}$
+* **Recall (Quantity):** Of all the actual cats in the dataset, how many did the model find?
+    * $\text{Recall} = \frac{TP}{TP + FN}$
+* **F1-Score (The Balance):** The harmonic mean of the two. Use this when your classes are imbalanced (e.g., 99% healthy images, 1% cancer images).
+* **Teaching Tip:** Use the "Spam Filter" analogy. High Precision means you don't accidentally send important emails to the spam folder. High Recall means you catch every piece of actual spam.
+
+##### 2. Training vs. Validation (The Generalization Gap)
+This is the most critical part of model evaluation. It tells you if your model is smart or just has a good memory.
+
+###### The Definitions
+* **Training Accuracy:** How well the model performs on the data it "practices" with every day.
+* **Validation Accuracy:** How well the model performs on a "held-out" set it has *never* seen (the exam).
+
+###### Identifying Problems
+* **Overfitting:** Training accuracy is 99%, but Validation is 70%. The model has "memorized" the specific images instead of learning general features like "ears" or "tails."
+* **Underfitting:** Both accuracies are low (e.g., 50%). The model is too simple (not enough layers) or hasn't trained long enough.
+* **The Sweet Spot:** When both accuracies are high and close to each other (e.g., 94% Train / 92% Val).
+* **Teaching Tip:** Overfitting is like a student who memorizes the exact answers to a practice test but fails the real exam because the questions changed slightly.
+
+##### 3. Visualizing Performance
+Charts are the "game tape" that allow you to analyse why the model failed.
+
+###### Learning Curves (Loss/Accuracy Plots)
+* You plot these over **Epochs** (full passes through the dataset).
+* **Expansion:** If the Validation Loss starts increasing while Training Loss continues to decrease, the model has started overfitting. You should stop training at that exact "elbow" point (this is called **Early Stopping**).
+
+###### The Confusion Matrix
+* A grid that shows "Actual Class" vs. "Predicted Class."
+* **Expansion:** It tells you if your model is biased. If it keeps confusing "Trucks" with "Cars," you might need more diverse truck data or higher-resolution images to see the differences.
+
+##### 4. CNN-Specific Visualizations (Interpretability)
+Since CNNs are "Black Boxes," we use these tools to "see" how they think.
+
+###### Filter Visualization
+* **What it is:** Plotting the weights of the convolutional layers as images.
+* **The Hierarchy:** * **Early Layers:** Look for "Gabor filters" (lines, edges, colors).
+    * **Mid Layers:** Look for textures and simple shapes (circles, honeycombs).
+    * **Deep Layers:** Look for complex features (eyes, wheels, faces).
+* **Expansion:** If the filters look like random static in the late stages, your model isn't successfully building complex concepts from simple ones.
+
+###### Grad-CAM (Heatmaps)
+* **What it is:** It highlights the pixels that most influenced the final classification.
+* **Why it matters:** It prevents "Cheating." If a model identifies a "Dog" but the heatmap is on the grass in the background, the model hasn't learned what a dog is—it's just learned that dogs are often on grass.
+
+##### 5. Other Key Outputs to Monitor
+* **Learning Rate (LR):** The "step size" for optimization. If the loss is bouncing up and down, the LR is too high. If it's barely moving, the LR is too low.
+* **Inference Time:** The time it takes to process one image. This is vital for real-world apps like self-driving cars or medical scanners.
+* **Weight Histograms:** Monitoring if your weights are becoming too large (exploding) or too small (vanishing). This helps you decide if you need **Batch Normalization**.

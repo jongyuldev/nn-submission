@@ -42,3 +42,40 @@ After this week's discussion I realized that no matter how well we try to split 
 
 **Next steps?**
 For the following week, I will be focusing on researching data splitting for optimal performance, mini-batching and epoch loops. My friend will be looking into pooling, padding and strides for our data and he will also be looking into the fundamentals of backpropagations.
+
+### Week 3
+**What have I done?**
+For this week's discussion, I have decided to tell my friend about data splitting, mini batching and epoch loops. Data splitting is important because we want to be able to train the model and be able to test that model to a set of testing data to test its validity in real world usage. Mini batching is similar to batching except it sequentially processes data to help improve its RAM efficiency when training and to update parameters more frequently compared to batching where it processes the entire dataset in one go. Epoch loops are necessary for the model to learn images by going through entire datasets multiple times instead of just once.
+
+**What have I learnt?**
+My friend has focused on teaching me the importance of a convolutional layer for image classification. Within a convolutional layer architecture, there involves a window that slides across an image and it performs particular mathematical calculations to help understand the image more efficiently. Padding adds 0s around images to help maintain image details and strides determines how many pixels to move the window across an image, essentially down sampling the images for efficient training. Pooling involves max pooling and average pooling and it occurs after getting the data into the ReLU. In a 2x2 window, max pooling would only take the highest value of pixel and eliminate the rest of the pixels to down sample an image. On the other hand, average pooling would take the average of all pixels in that window. Back propagation utilises the gradient descent and the softmax error signal of the model to update its network weights and bias. Finally, the convolutional layer updates the window using the weight function but instead the transpose of the input activation, we would be using the incoming error gradient.
+
+**Any changes to goals?**
+After today's discussion we found that this method of teaching other different topics instead of the mathematical and algorithmic aspects of a particular topic is much more efficient and less confusing to explain as there were no overlapping areas we talked about. So from now on we'll continue using this method of teaching to help us cover more topics quickly and focus on producing the final product.
+
+**Next steps?**
+For next week we'll be focusing on the evaluation of the results the model returns. I'll be focusing on the learning curve of the model, the difference between training and validation accuracy, and finally the GradCAM. My friend will focus on discussing about the confusion matrix and F1-score to investigate dataset imbalances that could be worsening the model performance.
+### Week 4
+**What have I done?**
+For this week I focused on discussing on the model accuracy evaluation and talking about GradCAM. Training accuracy of the model is talking about how accurately it is able to classify images that it has already trained on. Validation accuracy shows how accurately the model has been able to evaluate images that it has not trained on to assess its generalisability. The learning curve is showing these two accuracy outputs across the number of epochs. The GradCAM is then used to ensure that the model is training on the important details of an image to ensure that the model is not learning from the background of its data.
+
+**What have I learnt?**
+My friend discussed the confusion matrix and F1-score to evaluate dataset imbalance. The confusion matrix is used to output the correctness of multi-class classification on a table. The f1-score uses the precision and recall metrics that are gathered from a binary classification confusion matrix. The precision focuses on the how many of the model's positive predictions were actually correct and the recall focuses on how many of the positive predictions were correct based on all positive instances. The f1-score tells us how well the model has performed relative its dataset. To use the f1-score for multi-class classification we would have to perform the f1-score metric for each of the 7 classes as it only works on binary classification. 
+
+**Any changes to goals?**
+No changes of the goals were discussed this week as we were on a really good pace to meeting our scheduled deadlines.
+
+**Next steps?**
+Next week we plan to discuss the final part of our neural network from scratch. We will discuss what methods of optimisation can be implemented into our dataset and the model now that we have insight to the evaluation of the model performance. I will be focusing on the algorithmic optimisation of the model while my friend focuses on the dataset optimisation and dropout layers.
+### Week 5
+**What have I done?**
+This week I focused on teaching about ADAM (Adaptive Moment Estimation) optimisation. ADAM is a combination of two moments, the Momentum and RMSProp (Root Mean Squared Propagation). Momentum is an optimisation algorithm that uses inertia in the search direction to pass local minima. This is done through the usage of its previous gradient to help oscillate and converge. RMSProp normalises the gradient descent of the model through the usage of moving average of squared gradients which works really well for mini-batch learning. It decreases the learning rate for larger gradients to avoid learning too quick and increases learning rate for smaller gradients to avoid vanishing. ADAM takes Momentum and RMSProp as first and second moment. It takes the two formulas and influences their biases through the implementation of decay rate. This enables it to adapt its learning rate across the gradient descent to optimise quicker.
+
+**What have I learnt?**
+Continuing on from last week's topic my friend continued to focus on dataset optimisation and regularisation of the model. He discussed about implementing data augmentation to enlarge the dataset to be more balanced and implementing dropout layers to prevent the model from memorising the data from particular neurons. Data augmentation augments the dataset to produce multiple iterations of the images. For example, it can flip, rotate, zoom, shift, mirror, and adjust the brightness of images to produce more data for particular classes if there is a major data imbalance. Dropout prevents the model from overfitting by temporarily removing some of its neurons randomly and increase generalisability.
+
+**Any changes to goals?**
+Originally the goal was to develop a neural network from scratch but as our goal was to build a multi-class classification model we have decided to steer our goal towards developing a convolutional neural network from scratch. The architecture of the model would require quite a bit of refactoring as fully connected layers will need to be replaced with convolutional layers and further methods discussed on earlier weeks.
+
+**Next steps?**
+As our final discussion meeting has been completed, we are now going to purely focus on building prototypes and iterations of the model based on everything we have learnt. We plan to continue working separately and then merging our models together every week and then have our final discussion after 2 weeks to focus on producing a robust model. We also plan to update each other if we have discovered anything new that we could implement into our model for enhanced performance.
