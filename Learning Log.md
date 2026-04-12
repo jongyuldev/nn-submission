@@ -79,3 +79,14 @@ Originally the goal was to develop a neural network from scratch but as our goal
 
 **Next steps?**
 As our final discussion meeting has been completed, we are now going to purely focus on building prototypes and iterations of the model based on everything we have learnt. We plan to continue working separately and then merging our models together every week and then have our final discussion after 2 weeks to focus on producing a robust model. We also plan to update each other if we have discovered anything new that we could implement into our model for enhanced performance.
+### Week 6
+**What have I done?**
+Implementation of a weighted ADAM
+
+**What have I learnt?**
+Data quality and size matters
+- No matter how much I improved the architecture, noticed that validation accuracy kept capping at around 60% for 200 epochs at 1000 sample per class (total of 7000 class)
+
+**Any changes to goals?**
+
+**Next steps?**
