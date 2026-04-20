@@ -67,6 +67,7 @@ No changes of the goals were discussed this week as we were on a really good pac
 
 **Next steps?**
 Next week we plan to discuss the final part of our neural network from scratch. We will discuss what methods of optimisation can be implemented ~zinto our dataset and the model now that we have insight to the evaluation of the model performance. I will be focusing on the algorithmic optimisation of the model while my friend focuses on the dataset optimisation and dropout layers.
+
 ### Week 5
 **What have I done?**
 This week I focused on teaching about ADAM (Adaptive Moment Estimation) optimisation. ADAM is a combination of two moments, the Momentum and RMSProp (Root Mean Squared Propagation). Momentum is an optimisation algorithm that uses inertia in the search direction to pass local minima. This is done through the usage of its previous gradient to help oscillate and converge. RMSProp normalises the gradient descent of the model through the usage of moving average of squared gradients which works really well for mini-batch learning. It decreases the learning rate for larger gradients to avoid learning too quick and increases learning rate for smaller gradients to avoid vanishing. ADAM takes Momentum and RMSProp as first and second moment. It takes the two formulas and influences their biases through the implementation of decay rate. This enables it to adapt its learning rate across the gradient descent to optimise quicker.
@@ -79,14 +80,18 @@ Originally the goal was to develop a neural network from scratch but as our goal
 
 **Next steps?**
 As our final discussion meeting has been completed, we are now going to purely focus on building prototypes and iterations of the model based on everything we have learnt. We plan to continue working separately and then merging our models together every week and then have our final discussion after 2 weeks to focus on producing a robust model. We also plan to update each other if we have discovered anything new that we could implement into our model for enhanced performance.
+
 ### Week 6
 **What have I done?**
-Implementation of a weighted ADAM
+This week I focused on making several key improvements to the model. I replaced the standard ADAM optimiser with AdamW, a weighted variant that introduces weight decay to better regularise the model during training. I also significantly expanded the dataset from 1,000 to approximately 5,000 images per class, bringing the total to around 35,000 images, to give the model more data to generalise from. On top of this, I implemented batch normalisation to stabilise the training process and added spatial dropout between the convolutional layers alongside standard dropout on the dense layers to further reduce overfitting. Finally, I adjusted the training configuration to allow up to 500 epochs while introducing an early stopper to halt training once the model had sufficiently converged.
 
 **What have I learnt?**
-Data quality and size matters
-- No matter how much I improved the architecture, noticed that validation accuracy kept capping at around 60% for 200 epochs at 1000 sample per class (total of 7000 class)
+The most significant thing I learnt this week was that data quality and size matter as much as model architecture. No matter how much I refined the architecture, the validation accuracy kept plateauing at around 60% when training on only 1,000 samples per class over 200 epochs. Investigating this using GradCAM revealed that the lower quality data was causing the model to misinterpret images, which explained the plateau. I also discovered that vectorising the mathematical calculations rather than relying on standard arrays significantly boosted the speed of training, which became especially noticeable when working with the larger dataset.
 
 **Any changes to goals?**
+After observing the plateau behaviour throughout this process, I think it would be worthwhile to investigate further into what may be causing the model's performance ceiling so it can be pushed beyond its current limitations.
 
 **Next steps?**
+The next step is to continue investigating what is preventing the model from improving further. That said, the primary goal of this collaboration project, which was to learn how to build a convolutional neural network model from scratch, has effectively been achieved.
+
+
