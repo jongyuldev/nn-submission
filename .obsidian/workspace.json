@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Log.md",
+                "file": "Guide for Learner.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Learning Log"
+              "title": "Guide for Learner"
             }
           }
         ]
@@ -183,16 +183,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "40f942bc14860bb0",
+  "active": "ed5fa9d6477d6b0c",
   "lastOpenFiles": [
-    "Guide for Learner.md",
+    "Media/GradCAM_wrong.png",
     "Learning Log.md",
+    "Media/Learning Curve.png",
+    "Media/Pasted image 20260303200512.png",
+    "Media/Pasted image 20260303200503.png",
+    "Media/Overfit Gap.png",
+    "output3.png",
+    "output2.png",
+    "Media/Confusion Matrix.png",
+    "Media/GradCAM_right.png",
+    "Guide for Learner.md",
     "Learning Log.md.tmp.23284.1776689488126",
     "Learning Points.md",
     "Speaking Points.md",
     "Pasted image 20260306012008.png",
-    "Media/Pasted image 20260303200503.png",
-    "Media",
-    "Media/Pasted image 20260303200512.png"
+    "Media"
   ]
 }

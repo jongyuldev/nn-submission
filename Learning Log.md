@@ -1,20 +1,3 @@
-- Make at least four separate entries reasonably spaced over a period of at least six weeks
-- The entries can either be separate files or different sections within the same file.
-- They should be written using Markdown and stored in a private repository on GitHub.
-- You need to commit and push each entry as you make it so that the dates of the entries are correctly recorded in git.
-- You can include images and external links.
-
-For each entry identify
-
-- What you have done (to learn your skill and contribute to your project)
-- What you have learned
-- Any changes to your goals (or what your initial goals are for the first entry)
-- Next step(s) to achieve your goals
-
-The learning log should have a maximum total word count of 1500 words, as measured by the [Microsoft VS Code Word Count plugin](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wordcount) and have a reasonable balance between the entries.
-
----
-
 ### Week 1
 **What have I done?**
 For this week my and my friends got together to do our first iteration of teaching each other the basic things needed for us to start building our neural network model. I decided to stick to the algorithmic and logic side of neural networks while my friend focused on the mathematical and data processing aspect. 
@@ -66,7 +49,7 @@ My friend discussed the confusion matrix and f1-score to evaluate dataset imbala
 No changes of the goals were discussed this week as we were on a really good pace to meeting our scheduled deadlines.
 
 **Next steps?**
-Next week we plan to discuss the final part of our neural network from scratch. We will discuss what methods of optimisation can be implemented ~zinto our dataset and the model now that we have insight to the evaluation of the model performance. I will be focusing on the algorithmic optimisation of the model while my friend focuses on the dataset optimisation and dropout layers.
+Next week we plan to discuss the final part of our neural network from scratch. We will discuss what methods of optimisation can be implemented into our dataset and the model now that we have insight to the evaluation of the model performance. I will be focusing on the algorithmic optimisation of the model while my friend focuses on the dataset optimisation and dropout layers.
 
 ### Week 5
 **What have I done?**
