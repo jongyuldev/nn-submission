@@ -66,7 +66,7 @@ The resources below are ordered roughly by where they sit in the learning journe
 
 ### A note on using AI assistance
 
-For complex mathematical formulas — backpropagation gradients, vectorised convolution operations — using an AI tool to help translate equations into NumPy code is a reasonable and practical approach, as long as you understand what the code is doing before using it. Blindly copying formula implementations will make debugging nearly impossible.
+For complex mathematical formulas, backpropagation gradients, vectorised convolution operations, using an AI tool to help translate equations into NumPy code is a reasonable and practical approach, as long as you understand what the code is doing before using it. Blindly copying formula implementations will make debugging nearly impossible.
 
 ---
 
@@ -76,7 +76,7 @@ For complex mathematical formulas — backpropagation gradients, vectorised conv
 
 Building a CNN from scratch is genuinely difficult and time-consuming. Expect to spend significantly more time debugging numerical issues (vanishing gradients, NaN losses, shape mismatches) than you would using PyTorch. However, the depth of understanding gained is difficult to replicate any other way.
 
-The model built for this project achieved **69.5% accuracy** and a **weighted F1 score of 0.72** on a 7-class skin lesion classification task — demonstrating that a well-implemented scratch model is genuinely functional.
+The model built for this project achieved **69.5% accuracy** and a **weighted F1 score of 0.72** on a 7-class skin lesion classification task. This demonstrates that a well-implemented scratch model is genuinely functional.
 
 ![Learning Curves|385](Confusion%20Matrix.png)
 *Confusion matrix across 7 classes. The model performs strongest on `nv` due to it being the most represented class, highlighting how dataset imbalance directly affects per-class performance.*
@@ -93,7 +93,7 @@ model focuses on a central region where the critical feature is.
 
 ### Alternatives
 
-If your goal is a production-ready classifier, PyTorch or Keras will get you there far faster. pretrained models via transfer learning will also outperform a from-scratch CNN on most real datasets. Building from scratch is best justified as a **learning exercise** rather than a practical engineering choice.
+If your goal is a production-ready classifier, PyTorch or Keras will get you there far faster. pretrained models via transfer learning will also outperform a CNN from scratch on most real datasets. Building from scratch is best justified as a **learning exercise** rather than a practical engineering choice.
 
 | Approach | Learning Value | Development Speed | Performance Ceiling |
 |---|---|---|---|
